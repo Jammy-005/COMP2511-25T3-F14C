@@ -24,20 +24,20 @@ public class B extends A {
         A a = b;
         // TODO Does it make a difference that we're accessing these fields on
         // a variable of type A?
-        // System.out.println("var: " + a.var);
-        // System.out.println("varPub: " + a.varPub);
-        // System.out.println("varPro: " + a.varPro);
+        System.out.println("var: " + a.var);
+        System.out.println("varPub: " + a.varPub);
+        System.out.println("varPro: " + a.varPro);
     }
 
     // TODO Which of these two methods will work if uncommented (note the
     // different access modifier)?
-    // @Override
-    // public void protectedMethod() {
-    //
-    // }
+    @Override
+    public void protectedMethod() {
+    
+    }
 
-    // @Override
-    // void protectedMethod() {
-    //
-    // }
+    @Override
+    void protectedMethod() {
+    
+    }
 }

@@ -6,7 +6,7 @@ public class Employee {
 
     /**
      * Creates an Employee with the given name and salary.
-     * 
+     *
      * @param name   The full name of the employee.
      * @param salary The employee's yearly salary in dollars.
      */
@@ -49,5 +49,30 @@ public class Employee {
      */
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().toString() + " [name=" + name + ", salary=" + salary + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        } else if (obj == this) {
+            return true;
+        } else if (!obj.getClass().equals(this.getClass())) {
+            return false;
+        }
+
+        Employee other = (Employee) obj;
+        return this.name.equals(other.name) && this.salary == other.salary;
+    }
+
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John Doe", 50000);
+        Employee emp2 = new Employee("John Doe", 50000);
+        System.out.println(emp1.equals(emp2));
     }
 }
