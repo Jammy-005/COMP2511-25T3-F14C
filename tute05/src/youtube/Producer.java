@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Producer extends User implements Subject {
-    private String name;
     private List<Video> videos = new ArrayList<Video>();
     private List<Observer> subscribers = new ArrayList<Observer>();
 
     public Producer(String name) {
         super(name);
-        this.name = name;
     }
 
     public void postVideo(String name, int length) {
@@ -25,7 +23,7 @@ public class Producer extends User implements Subject {
 
     @Override
     public String toString() {
-        return name;
+        return super.toString();
     }
 
     @Override
